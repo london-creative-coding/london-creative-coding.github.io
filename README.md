@@ -1,6 +1,6 @@
 # London Creative Coding Website
 
-[View wbsite](http://london-creative-coding.github.io/)
+[View website](http://london-creative-coding.github.io/)
 
 This is the website for the London Creative Coding group.
 
