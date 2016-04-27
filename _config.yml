@@ -1,0 +1,4 @@
+title: London Creative Coding
+baseurl: ""
+exclude: [README.md]
+permalink: /:year/:month/:day/:title/
