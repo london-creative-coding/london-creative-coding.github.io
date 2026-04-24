@@ -3,9 +3,29 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
+# .github/dependabot.yml
 version: 2
 updates:
-  - package-ecosystem: "bundler" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  # Maintain dependencies for Bundler (RubyGems)
+  - package-ecosystem: "bundler"
+    directory: "/" # Location of your Gemfile
+    schedule:
+      interval: "weekly" # Options: daily, weekly, monthly
+      day: "monday"
+    open-pull-requests-limit: 5
+    # Since you are using 'github-pages', which locks many sub-dependencies,
+    # it is often helpful to group updates to avoid PR noise.
+    groups:
+      jekyll-updates:
+        patterns:
+          - "jekyll*"
+          - "github-pages*"
+    labels:
+      - "dependencies"
+      - "ruby"
+
+  # Maintain GitHub Actions (highly recommended)
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
       interval: "weekly"
