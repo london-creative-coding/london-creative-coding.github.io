@@ -1,4 +1,4 @@
 title: London Creative Coding
 baseurl: ""
-exclude: [README.md]
+exclude: [README.md, Gemfile, Gemfile.lock, .ruby-version, docs/, vendor/]
 permalink: /:year/:month/:day/:title/
